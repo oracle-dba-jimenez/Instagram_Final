@@ -1,0 +1,119 @@
+<!--
+    // Realizado por Ing. Miguel A. Jiménez
+    // el 21/8/2020
+    // Proyecto Instagram final "InstaFamily"
+    // Crea Publicación - Post de usuario conectado
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Publicaciones </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-storage.js"></script>
+    <script src="js/init-firebase.js"></script>
+    <script src="js/post.js"></script>
+
+</head>
+
+<body>
+    <div id="loading" style="display: none;">
+        <img id="loading-image" src="images/tenor.gif" alt="Loading..." />
+    </div>
+    <nav class="navigation">
+        <div class="navigation__column">
+            <a href="feed.html">
+                <img src="images/logo.png" />
+            </a>
+        </div>
+        <div class="navigation__column">
+            <ul class="navigations__links">
+                <li class="navigation__list-item">
+                    <a href="explore.html" class="navigation__link" title="Explorar otros perfiles">
+                        <i class="fa fa-compass fa-lg"></i>
+                    </a>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="profile.html" class="navigation__link" title="Ver mi perfil">
+                        <i class="fa fa-user-o fa-lg"></i>
+
+                    </a>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="javascript:void(0)" onclick="logOut()" class="navigation__link" title="Cerrar la sesión">
+                        <i class="fa fa-power-off fa-lg"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main id="edit-profile">
+        <div class="edit-profile__container">
+            <header class="edit-profile__header">
+                <div class="edit-profile__avatar-container">
+                    <img id="imgProfile" src="images/avatar.jpg" class="edit-profile__avatar" />
+                </div>
+                <h4 id="labelName" class="edit-profile__username">INSTAFAMILY</h4>
+            </header>
+            <form id="form" action="post" class="edit-profile__form">
+                <div id="s_div" style="display: none;">
+                    <center>
+                        <i title="Eliminar publicación" onclick="deletePost()" id="btnDelete"
+                            style="font-size: 1.5rem;padding-bottom: 2%;color: red;" class="fa fa-trash fa-lg"></i>
+                    </center>
+
+                    <br />
+                    <img style="width: 400px;height: 300px;display: block;margin-left: auto;margin-right: auto;"
+                        id="img_p" />
+                    <br />
+
+                    <div class="form__row">
+
+                        <label for="otherFile" class="form__label">Cambiar imagen:</label>
+                        <input id="otherFile" type="file" name="otherFile" accept="image/*">
+                    </div>
+
+                </div>
+
+
+                <div id="createFile" class="form__row">
+                    <label for="fileM" class="form__label">Añadir imagen:</label>
+                    <input id="fileM" type="file" name="fileM" accept="image/*" required>
+                </div>
+                <div class="form__row">
+                    <label for="wheretitle" class="form__label">Donde ocurrió:</label>
+                    <input id="wheretitle" type="text" class="form__input" required />
+                </div>
+                <div class="form__row">
+                    <label for="description" class="form__label">Descripción:</label>
+                    <textarea id="description" required></textarea>
+                </div>
+
+
+                <input id="btn" type="submit" value="Publicar">
+
+            </form>
+        </div>
+    </main>
+</body>
+
+<footer class="footer text-center">
+    <p></p>
+    <p></p>
+    <p>Diseñado por:</p>
+    <p>Ing. Miguel Angel Jiménez S., MA &copy; 2020 - Todos los derechos reservados </p>
+</footer>
+
+</html>

@@ -1,0 +1,77 @@
+<!--
+    // Realizado por Ing. Miguel A. Jiménez
+    // el 21/8/2020
+    // Proyecto Instagram final "InstaFamily"
+    // Publicación - Post
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Publicación única</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/general.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <script src="js/init-firebase.js"></script>
+    <script src="js/single-post.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="loading" style="display: none;">
+        <img id="loading-image" src="images/tenor.gif" alt="Loading..." />
+    </div>
+    <nav class="navigation">
+        <div class="navigation__column">
+            <a href="feed.html">
+                <!-- Master branch comment -->
+                <img src="images/logo.png" />
+            </a>
+        </div>
+
+        <div class="navigation__column">
+            <ul class="navigations__links">
+                <li class="navigation__list-item">
+                    <a href="explore.html" class="navigation__link" title="Explorar otros perfiles">
+                        <i class="fa fa-compass fa-lg"></i>
+
+                    </a>
+                </li>
+
+                <li class="navigation__list-item">
+                    <a href="profile.html" class="navigation__link" title="Ver mi perfil">
+                        <i class="fa fa-user-o fa-lg"></i>
+                    </a>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="javascript:void(0)" onclick="logOut()" class="navigation__link" title="Cerrar la sesión">
+                        <i class="fa fa-power-off fa-lg"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main id="feed">
+
+    </main>
+
+</body>
+
+<footer class="footer text-center">
+    <p></p>
+    <p></p>
+    <p>Diseñado por:</p>
+    <p>Ing. Miguel Angel Jiménez S., MA &copy; 2020 - Todos los derechos reservados </p>
+</footer>
+
+</html>

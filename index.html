@@ -1,0 +1,60 @@
+<!--
+    // Realizado por Ing. Miguel A. Jiménez
+    // el 21/8/2020
+    // Proyecto Instagram final "InstaFamily" Rev.1.0
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iniciar Sesión InstaFamily</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <script src="js/init-firebase.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+    <div id="loading" style="display: none;">
+        <img id="loading-image" src="images/tenor.gif" alt="Loading..." />
+    </div>
+    <main id="login">
+        <div class="login__column">
+            <img src="images/phoneImage.png" class="login__phone" />
+        </div>
+        <div class="login__column">
+
+            <div class="login__box">
+                <img src="images/loginLogo.png" class="login__logo" />
+                <form id="form" method="post" class="login__form">
+                    <input id="username" type="email" name="username" placeholder="Correo electrónico" required />
+                    <input id="password" type="password" name="password" placeholder="Contraseña" required />
+                    <input id="saveButton" type="submit" value="Iniciar sesión" />
+                </form>
+            </div>
+            <div class="login__box ">
+                <span>¿No tienes una cuenta?</span> <a href="signup.html">Regístrate</a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+<footer class="footer text-center">
+    <p></p>
+    <p></p>
+    <p>Diseñado por:</p>
+    <p>Ing. Miguel Angel Jiménez S., MA &copy; 2020 - Todos los derechos reservados </p>
+</footer>
+
+</html>

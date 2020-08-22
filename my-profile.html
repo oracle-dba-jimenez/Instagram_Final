@@ -1,0 +1,115 @@
+<!--
+    // Realizado por Ing. Miguel A. Jiménez
+    // el 21/8/2020
+    // Proyecto Instagram final "InstaFamily"
+    // Edita mi perfil
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/general.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <script src="js/init-firebase.js"></script>
+    <script src="js/my-profile.js"></script>
+
+
+</head>
+
+<body>
+    <div id="loading" style="display: none;">
+        <img id="loading-image" src="images/tenor.gif" alt="Loading..." />
+    </div>
+    <nav class="navigation">
+        <div class="navigation__column">
+            <a href="feed.html">
+                <img src="images/logo.png" />
+            </a>
+        </div>
+        <div class="navigation__column">
+            <ul class="navigations__links">
+                <li class="navigation__list-item">
+                    <a href="explore.html" class="navigation__link" title="Explorar otros perfiles">
+                        <i class="fa fa-compass fa-lg"></i>
+
+                    </a>
+                </li>
+
+                <li class="navigation__list-item">
+                    <a href="profile.html" class="navigation__link" title="Ver mi perfil">
+                        <i class="fa fa-user-o fa-lg"></i>
+                    </a>
+                </li>
+                <li class="navigation__list-item">
+                    <a href="javascript:void(0)" onclick="logOut()" class="navigation__link" title="Cerrar la sesión">
+                        <i class="fa fa-power-off fa-lg"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main id="profile">
+        <header class="profile__header">
+            <div class="profile__column">
+                <img id="profile_img" src="#" />
+            </div>
+            <div class="profile__column">
+                <div class="profile__title">
+                    <h3 id="username" class="profile__username"></h3>
+                </div>
+
+
+
+                <ul class="profile__stats">
+
+                    <li class="profile__stat">
+                        <span id="postCounter" class="stat__number">333</span> publicaciones
+                    </li>
+
+
+
+                </ul>
+
+                <p class="profile__bio">
+                    <span id="personname" class="profile__full-name">
+                        Luz Angeles Jimenez Ramirez
+                    </span>
+                    <a id="webside" href="#">www.acaedufin.com</a>
+                    <br />
+                    <span style="font-weight: bold;">Biografía: </span><span id="bio">Haciendo lo que sea y comiendo Pho
+                        lorem ipsum zanahorias tomate, rebajas.
+                        Haciendo lo que sea y comiendo Pho lorem ipsum zanahorias tomate, rebajas. Haciendo lo que sea y
+                        comiendo Pho lorem ipsum zanahorias tomate,
+                        rebajas. Haciendo lo que sea y comiendo Pho lorem ipsum zanahorias tomate, rebajas. </span>
+                    <br />
+                    <span style="font-weight: bold;">Género: </span><span id="sex"></span>
+                    <br />
+                    <span style="font-weight: bold;">Número de teléfono: </span><span id="tel"></span></span>
+                </p>
+            </div>
+        </header>
+        <section id="post_div" class="profile__photos">
+
+        </section>
+    </main>
+
+</body>
+
+<footer class="footer text-center">
+    <p></p>
+    <p></p>
+    <p>Diseñado por:</p>
+    <p>Ing. Miguel Angel Jiménez S., MA &copy; 2020 - Todos los derechos reservados </p>
+</footer>
+
+</html>

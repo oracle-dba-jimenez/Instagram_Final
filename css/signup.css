@@ -1,0 +1,29 @@
+/*
+Realizado por Ing. Miguel A. Jimenez
+el 21/8/2020
+Registro de usuario
+*/
+
+.mainTitle{
+    color: rgba(var(--f52,142,142,142),1);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin: -6px 0 -6px;
+}
+
+.secondTitle{
+    color: rgba(var(--f52,142,142,142),1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin: -3px 0 -4px;
+}
+
+.politicsLabel{
+    color: #8e8e8e;
+    color: rgba(var(--f52,142,142,142),1);
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+}

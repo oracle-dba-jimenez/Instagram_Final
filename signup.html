@@ -1,0 +1,82 @@
+<!--
+    // Realizado por Ing. Miguel A. Jiménez
+    // el 21/8/2020
+    // Proyecto Instagram final "InstaFamily"
+    // Regristro de usuarios
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Regístrate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-storage.js"></script>
+    <script src="js/init-firebase.js"></script>
+    <script src="js/signup.js"></script>
+
+</head>
+
+<body>
+    <div id="loading" style="display: none;">
+        <img id="loading-image" src="images/tenor.gif" alt="Loading..." />
+    </div>
+    <main id="login">
+
+        <div class="login__column">
+            <img src="images/phoneImage.png" class="login__phone" />
+        </div>
+
+        <div class="login__column">
+            <div class="login__box">
+                <img src="images/loginLogo.png" class="login__logo" />
+                <br />
+                <label class="mainTitle">Regístrate para ver fotos y videos de tus amigos.</label>
+                <br />
+
+
+                <form id="form" method="post" class="login__form">
+                    <br />
+                    <input id="file" type="file" id="myFile" name="filename" accept="image/*" required>
+                    <br />
+                    <input id="email" type="email" name="email" placeholder="Correo electrónico" required />
+                    <br />
+                    <input id="name" type="text" name="name" placeholder="Nombre" required />
+                    <br />
+                    <input id="username" type="text" name="username" placeholder="Nombre de usuario" required />
+                    <br />
+                    <input id="password" type="password" name="password" placeholder="Contraseña" required />
+                    <br />
+                    <input id="sighUpButton" type="submit" value="Regístrate" />
+                    <label class="politicsLabel">Al registrarse, acepta las condiciones, la Política de datos y la
+                        Política de cookies.</label>
+                </form>
+            </div>
+
+            <div class="login__box">
+                <span>¿Ya tienes una cuenta?</span> <a href="index.html">Inicia sesión</a>
+            </div>
+
+
+        </div>
+    </main>
+
+</body>
+
+<footer class="footer text-center">
+    <p></p>
+    <p></p>
+    <p>Diseñado por:</p>
+    <p>Ing. Miguel Angel Jiménez S., MA &copy; 2020 - Todos los derechos reservados </p>
+</footer>
+
+</html>
