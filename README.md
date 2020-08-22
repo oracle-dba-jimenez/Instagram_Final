@@ -58,6 +58,8 @@ Es un clone de la versión web de la famosa red social Instagram para poner en p
 
 * [Visual Studio Code] (https://code.visualstudio.com/).
 
+* [Font Awesome] (http://fontawesome.io).
+
 ## Pasos para configurar proyecto
 
 * Instalar los siguientes productos:
